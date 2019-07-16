@@ -1,0 +1,13 @@
+{
+  "name": "cnode",
+  "version": "1.0.0",
+  "description": "地址： https://cnodejs.org/api",
+  "main": "main.js",
+  "scripts": {},
+  "author": "SunSeekerX",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "moment": "^2.24.0"
+  }
+}
