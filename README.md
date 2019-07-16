@@ -43,12 +43,12 @@ cnode社区uni-app版
 
 ### H5
 
-![](assets/1.gif)
+![](https://github.com/SunSeekerX/uni-app-cnode/raw/master/assets/1.gif)
 
 ### 微信小程序
 
-![](assets/2.gif)
+![](https://github.com/SunSeekerX/uni-app-cnode/raw/master/assets/2.gif)
 
 ### App
 
-![](assets/3.gif)
+![](https://github.com/SunSeekerX/uni-app-cnode/raw/master/assets/3.gif)
