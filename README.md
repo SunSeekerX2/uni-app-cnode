@@ -1,5 +1,7 @@
 # cnode社区uni-app版
 
+cnode社区uni-app版
+
 > 数据api来源cnode公开api,地址： https://cnodejs.org/api
 >
 > axios风格的request封装改造自 [SnoopyChen](https://ext.dcloud.net.cn/publisher?id=1260)的`封装的request网络请求`：https://ext.dcloud.net.cn/plugin?id=159
@@ -26,6 +28,12 @@
 - [x] 下拉刷新
 - [x] 详情
 - [ ] 搜索
+
+
+
+## 更新日志
+
+2019-07-16 完成首页列表，详情界面
 
 
 
