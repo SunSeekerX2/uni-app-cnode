@@ -1,0 +1,70 @@
+<template>
+	<div>
+		<!-- 状态栏 -->
+		<!-- <div class="status_bar" :style="{'height': statusBarHeight}"><div class="top_view" :style="{'height': statusBarHeight}"></div></div> -->
+
+		<div class="example">
+			<div class="item" @click="changeNum">
+				<text class="text">点击文字，改变数字大小: {{ num }}</text>
+			</div>
+			<div class="item" @click="showModal('native')"><text class="text">使用 weex 的 API 弹出模态框</text></div>
+			<div class="item" @click="showModal('uni')"><text class="text">使用 uni-app 的 API 弹出模态框</text></div>
+			<div class="item" @click="showModal('plus')"><text class="text">使用 plus 的 API 弹出模态框</text></div>
+		</div>
+	</div>
+</template>
+
+<script>
+export default {
+	data() {
+		return {
+			num: 1,
+			statusBarHeight: 0
+		};
+	},
+	created() {
+		this.statusBarHeight = plus.navigator.getStatusbarHeight();
+		console.log(plus.navigator.getStatusbarHeight());
+		console.log('页面created');
+		weex.requireModule('common').getStatusBarHeight(function(statusBarHeight) {
+			console.log(statusBarHeight);
+		});
+	},
+	methods: {
+		changeNum() {
+			this.num += 1;
+		},
+		showModal(type) {
+			if (type === 'uni') {
+				uni.showModal({ content: '使用 uni-app 的 API 弹出模态框' });
+			} else if (type === 'plus') {
+				plus.nativeUI.alert('使用 uni-app 的 API 弹出模态框');
+			} else {
+				var modal = weex.requireModule('modal');
+				modal.alert({ message: '使用 weex 的 API 弹出模态框' });
+			}
+		}
+	}
+};
+</script>
+
+<style lang="scss">
+.example {
+	flex-direction: column;
+}
+.text {
+	line-height: 80px;
+	font-size: 32px;
+	color: #333;
+}
+.item {
+	height: 80px;
+	width: 690px;
+	margin: 30px;
+	background-color: #f8f8f8;
+	border-width: 1px;
+	border-color: #eee;
+	border-radius: 10px;
+	align-items: center;
+}
+</style>

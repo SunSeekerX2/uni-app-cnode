@@ -7,8 +7,13 @@
 				"navigationStyle": "custom",
 				"enablePullDownRefresh": true,
 				"app-plus": {
-					"titleNView": false,
+					"titleNView": {
+						"backgroundColor": "#444444",
+						"titleText": "",
+						"type": "default"
+					},
 					"bounce": "none"
+					//"nvueCompiler":"uni-app" //是否启用 uni-app 模式  
 				}
 			}
 		},
@@ -18,7 +23,8 @@
             "style" : {
 				"navigationStyle": "custom",
 				"app-plus": {
-					"bounce": "none"
+					"bounce": "none",
+					"nvueCompiler":"uni-app" //是否启用 uni-app 模式  
 				}
 			}
         }
